@@ -10,8 +10,8 @@ function App() {
   const [countryCode, setCountryCode] = useState('');
   return (
     <>
-      <IpAddress setCountryCode={setCountryCode} />
-      {countryCode && <CountryDetails setPosition={setPosition} countryCode={countryCode} />}
+      <IpAddress setCountryCode={setCountryCode} setPosition={setPosition} />
+      {countryCode && <CountryDetails countryCode={countryCode} />}
       {position && <MapLocation position={position} />}
     </>
   );
